@@ -1,0 +1,1 @@
+nvcc -arch=sm_XX your_file.cu -o your_program
