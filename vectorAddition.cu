@@ -34,6 +34,10 @@ int main(){
     cout<<"Enter the size of the arrayto be computed on GPU: "; 
     cin>>n; 
 
+    //Size of array in bytes
+    size_t size = n*sizeof(float);
+
+
     // Allocating memory on the CPU for the input and output vectors
     float *a = new float[n];
     float *b = new float[n];
@@ -45,7 +49,7 @@ int main(){
     b[i]=0.2f;
     }
 
-    
+
 
     // Formula (N+threadperblock-1)/threadsperblock for first CUDA kernel prameter
 
